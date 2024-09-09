@@ -1,0 +1,20 @@
+<div class="cont">
+  <span class="name">
+    {{ item.name }}
+  </span>
+  <span style="width: 100px"> Quantità {{ item.quantity }} </span>
+  <span style="width: 250px; text-align: right">
+    Totale
+    <span class="total">{{
+      item.price * item.quantity | currency : "EUR"
+    }}</span>
+  </span>
+  <div style="width: 70px; display: flex; justify-content: space-evenly">
+    <button>
+      <span class="material-symbols-outlined"> delete </span>
+    </button>
+    <button>
+      <span class="material-symbols-outlined"> edit </span>
+    </button>
+  </div>
+</div>

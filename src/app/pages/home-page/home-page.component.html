@@ -1,0 +1,9 @@
+<h1>Benvenuto!</h1>
+<div style="text-align: right; padding: 0 20px; margin: 0 20px">
+  <button>Aggiungi</button>
+</div>
+<app-bill
+  *ngFor="let bill of bills"
+  [bill]="bill"
+  (onDelete)="onBillChange()"
+></app-bill>

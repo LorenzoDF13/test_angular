@@ -1,0 +1,23 @@
+<div class="cont">
+  <a [routerLink]="['/bill', bill.id]" class="name">
+    {{ bill.name }}
+  </a>
+  <span> {{ bill.items.length }} elementi </span>
+  <span>
+    Totale <span class="total">{{ bill.total | currency : "EUR" }}</span>
+  </span>
+  <div style="width: 70px; display: flex; justify-content: space-evenly">
+    <button>
+      <span
+        (click)="open()"
+        class="material-symbols-outlined"
+        style="color: rgb(220, 53, 69)"
+      >
+        delete
+      </span>
+    </button>
+    <button>
+      <span class="material-symbols-outlined"> edit </span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<h1>Conto di {{ bill?.name }}</h1>
+<app-item *ngFor="let item of bill?.items" [item]="item"></app-item>
+<div></div>
+<div class="total">
+  <span style="width: 200px; color: white"> . </span>
+  <span style="color: white; width: 100px"> . </span>
+  <div style="width: 250px; text-align: right">
+    Totale complessivo
+    <span class="totalPrice">{{ total | currency : "EUR" }}</span>
+  </div>
+  <button style="width: 70px">Paga</button>
+</div>
